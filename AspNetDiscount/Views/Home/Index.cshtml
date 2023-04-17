@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 <h2>Ürünler</h2>
-
+<a href="/Discounts/Index">İndirimleri Görüntüle</a>
 <table class="table">
     <tr>
   
@@ -15,7 +15,7 @@
         </th>
 
         <th>
-            Discounded Price
+            @Html.DisplayNameFor(model => model.DiscoundedPrice)
         </th>
     </tr>
 
@@ -29,7 +29,7 @@
         @Html.DisplayFor(modelItem => item.Price)
     </td>
     <td>
-        @
+        @Html.DisplayFor(modelItem => item.DiscoundedPrice)
     </td>
 </tr>
     }

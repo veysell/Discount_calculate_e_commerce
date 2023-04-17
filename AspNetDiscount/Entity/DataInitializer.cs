@@ -32,6 +32,17 @@ namespace AspNetDiscount.Entity
                 context.Products.Add(item);
             }
 
+            List<Discount> discounts = new List<Discount>()
+            {
+                new Discount(){  CategoryId = 1, DiscountPercentage=10, Name="BlackFriday",
+                    StartDate=DateTime.Now, EndDate=new DateTime(2023,04,20)}
+
+            };
+            foreach (var item in discounts)
+            {
+                context.Discounts.Add(item);
+            }
+
             context.SaveChanges();
             base.Seed(context);
         }
