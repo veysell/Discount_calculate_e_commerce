@@ -28,6 +28,11 @@ namespace AspNetDiscount.Controllers
                     product.DiscoundedPrice = product.Price - (product.Price * discount.DiscountPercentage / 100);
                     db.SaveChanges();
                 }
+                else
+                {
+                    product.DiscoundedPrice = -1;
+                    db.SaveChanges();
+                }
                 
             }
 
